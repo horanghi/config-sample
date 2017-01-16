@@ -1,0 +1,145 @@
+spring:
+  profiles:
+    active: local
+info:
+  component: dash
+---
+restTemplate:
+  url: http://10.202.35.109:8081/featExt
+spring:
+  profiles: local
+mosaic:
+  domain: dev.mosaic.skplanet.com
+  serviceCode: dashlocal
+  authCode: zkdashlocal
+  port: 9102
+clickBest:
+  domain: dev.mosaic.skplanet.com
+  serviceCode: clickdev
+  authCode: clickdevpw
+  port: 9102
+dash:
+  domain: 172.19.114.205
+  serviceCode: dash
+  authCode: dashpw
+  port : 9102
+soho:
+  domain: 172.19.114.205
+  serviceCode: soho
+  authCode: sohopw
+  port : 9102
+dsconf:
+  shard: 30
+server:
+  port: 8090
+tomcatAjp:
+    port: 9080
+    remoteauthentication: false
+    enabled: true
+    protocol: AJP/1.3
+    scheme: http
+---
+restTemplate:
+  url: http://10.202.35.109:8081/featExt
+spring:
+  profiles: dev
+mosaic:
+  domain: dev.mosaic.skplanet.com
+  serviceCode: dashdev
+  authCode: zkdashdevpw
+  port : 9102
+clickBest:
+  domain: dev.mosaic.skplanet.com
+  serviceCode: clickdev
+  authCode: clickdevpw
+  port : 9102
+dash:
+  domain: 172.19.114.205
+  serviceCode: dash
+  authCode: dashpw
+  port : 9102
+soho:
+  domain: 172.19.114.205
+  serviceCode: soho
+  authCode: sohopw
+  port : 9102
+dsconf:
+  shard: 30
+server:
+  port: 8080
+tomcatAjp:
+    port: 9080
+    remoteauthentication: false
+    enabled: true
+    protocol: AJP/1.3
+    scheme: http
+---
+spring:
+  profiles: prod01
+restTemplate:
+  url: http://220.103.232.156/featExt
+mosaic:
+  domain: 172.18.207.163,172.18.207.164,172.18.207.165
+  serviceCode: dash
+  authCode: mdashpw
+  port: 9102
+clickBest:
+  domain: 172.18.207.163,172.18.207.164,172.18.207.165
+  serviceCode: ctr
+  authCode: Tlxldkf
+  port: 9102
+dash:
+  domain: 172.18.207.163,172.18.207.164,172.18.207.165
+  serviceCode: dash
+  authCode: zkdashpw
+  port: 9202
+soho:
+  domain: 172.18.207.163,172.18.207.164,172.18.207.165
+  serviceCode: soho
+  authCode: zksohopw
+  port: 9202
+dsconf:
+  shard: 30
+server:
+  port: 8080
+tomcatAjp:
+    port: 9080
+    remoteauthentication: false
+    enabled: true
+    protocol: AJP/1.3
+    scheme: http
+---
+spring:
+  profiles: testprod
+restTemplate:
+  url: http://220.103.232.156/featExt
+mosaic:
+  domain: 172.18.207.163,172.18.207.164,172.18.207.165
+  serviceCode: dash
+  authCode: mdashpw
+  port: 9102
+clickBest:
+  domain: 172.18.207.163,172.18.207.164,172.18.207.165
+  serviceCode: ctr
+  authCode: Tlxldkf
+  port: 9102
+dash:
+  domain: 172.18.207.163,172.18.207.164,172.18.207.165
+  serviceCode: dash
+  authCode: zkdashpw
+  port: 9202
+soho:
+  domain: 172.18.207.163,172.18.207.164,172.18.207.165
+  serviceCode: soho
+  authCode: zksohopw
+  port: 9202
+dsconf:
+  shard: 30
+server:
+  port: 8070
+tomcatAjp:
+    port: 9070
+    remoteauthentication: false
+    enabled: true
+    protocol: AJP/1.3
+    scheme: http

@@ -1,0 +1,27 @@
+mosaic:
+  domain: dev.mosaic.skplanet.com
+  service : thing
+  auth : thingpw
+
+info:
+  component: Zuul Server
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+zuul:
+  routes:
+    v1:
+      url: http://localhost:8090/v1
+ribbon:
+  euraeka:
+    enabled: false
+server:
+  port: 8080
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
